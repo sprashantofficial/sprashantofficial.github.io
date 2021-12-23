@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<script> 
+	    function clearFunction() {
+	    	document.getElementById('result').value = "";
+	    }
+
+	    function fillValue(data) {
+	    	document.getElementById('result').value += data;
+	    }
+
+	    function solve() {
+	    	var x = document.getElementById('result').value;
+	    	var y = eval(x);
+	    	document.getElementById('result').value = y;
+	    }
+	</script>
+</head>
+<body>
+	<center><h2>Welcome to my Calculator!</h2></center>
+	<table border="1">
+		<tr>
+			<td colspan="3"><input type="text" id="result" /></td>
+			<td><input type="button" value="C" onclick="clearFunction()" /></td>
+		</tr>
+		<tr>
+			<td><button value="1" onclick="fillValue(value)">1</button></td>
+			<td><button value="2" onclick="fillValue(value)">2</button></td>
+			<td><button value="3" onclick="fillValue(value)">3</button></td>
+			<td><button value="/" onclick="fillValue(value)">/</button></td>
+		</tr>
+		<tr>
+			<td><button value="4" onclick="fillValue(value)">4</button></td>
+			<td><button value="5" onclick="fillValue(value)">5</button></td>
+			<td><button value="6" onclick="fillValue(value)">6</button></td>
+			<td><button value="-" onclick="fillValue(value)">-</button></td>
+		</tr>
+		<tr>
+			<td><button value="7" onclick="fillValue(value)">7</button></td>
+			<td><button value="8" onclick="fillValue(value)">8</button></td>
+			<td><button value="9" onclick="fillValue(value)">9</button></td>
+			<td><button value="+" onclick="fillValue(value)">+</button></td>
+		</tr>
+		<tr>
+			<td><button value="." onclick="fillValue(value)">.</button></td>
+			<td><button value="0" onclick="fillValue(value)">0</button></td>
+			<td><button value="=" onclick="solve()">=</button></td>
+			<td><button value="*" onclick="fillValue(value)">*</button></td>
+		</tr>
+	</table>
+</body>
+</html>
